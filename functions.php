@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$version = filemtime( get_stylesheet_directory() . '/style.dev.css' );
 
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	if ( true === WP_DEBUG ) {
 		wp_enqueue_style( 'mytheme-dev-style', get_template_directory_uri() . '/style.dev.css', array(), $version, 'screen' );
 	} else {
 		wp_enqueue_style( 'mytheme-style', get_stylesheet_uri() );
