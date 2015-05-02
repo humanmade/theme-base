@@ -1,0 +1,18 @@
+default:
+  - sass:dev
+  - autoprefixer:dev
+  - concat
+
+dowatch:
+  - browserSync
+  - watch
+
+build:
+  - sass:dist
+  - autoprefixer
+  - cssshrink
+  - imagemin
+  - concat:dist
+  - bumpup
+  - shell
+  - compress
